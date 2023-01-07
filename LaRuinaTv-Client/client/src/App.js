@@ -10,6 +10,7 @@ import { SlideCanvas } from './Components/SlideCanvas';
 import { Lanzamientos } from './Components/Lanzamientos';
 
 import { Switch, Route } from 'react-router-dom';
+import Dashboard from './Admin/Dashboard/Dashboard';
 
 function App() {
   
@@ -38,8 +39,11 @@ function App() {
               <Route path={'/view/v=:urlid=_type_=:typeMedia=_id_=:id'}>
                 <View/>
               </Route>
-              <Route path={'/play/p=:urlid=_type_=:typeMedia=_id_=:id'}>
+              <Route exact path={'/play'}>
                 <Play/>
+              </Route>
+              <Route exact path={'/dashboard'}>
+                <Dashboard/>
               </Route>
               </div>
             </div>

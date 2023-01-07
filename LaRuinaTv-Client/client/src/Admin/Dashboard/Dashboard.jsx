@@ -1,15 +1,17 @@
 import { Card } from '@mui/material'
 import React from 'react'
-import { Title } from 'react-admin'
+import { Title, Admin,Resource } from 'react-admin'
 import CardContent from '@mui/material/CardContent'
+import Payments from '../Payments'
+import Suscriptions from '../Suscriptions'
+
 
 const Dashboard = () => {
   return (
-    <Card>
-      <Title title="Dashboard"/>
-      <h1>Welcome to the DashBoard</h1>
-      <CardContent>This is the DashBoard</CardContent>
-      </Card>
+    <Admin>
+      <Resource name='payments' list={<Payments/>}/>
+      <Resource name='suscriptions' list={<Suscriptions/>}/>
+    </Admin>
   )
 }
 

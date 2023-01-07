@@ -7,7 +7,7 @@ import { BodyCss } from '../functions/BodyCss';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { getCategorias, getPosts, resetMedia } from '../middlewares/redux/actions';
-
+import {Link} from 'react-router-dom'
 
 const Browser = () => {
     BodyCss()
@@ -46,6 +46,10 @@ const Browser = () => {
 {/* ---------------------FOOTER--------------------- */}
 
                         <Footer/>
+
+<div>
+    <Link exact to='/play'><h1>Go to play</h1></Link>
+</div>
 
         </div>
     )
